@@ -49,7 +49,7 @@ class RELATION:
     DECIDES_BUDGET = "decyduje o budżecie"
     WARN = "zwrócić uwagę/upomnieć/udzielić nagany"
     DECREASE_DIET = "zmniejszyć dietę"
-    EXCLUDE_FROM_PRECEEDINGS = "wykluczyć z obrad"
+    EXCLUDE_FROM_PRECEEDINGS = "wyklucza z obrad"
 
 
 # Graph initialization
@@ -141,8 +141,13 @@ G.add_edge(ELEMENT.MARSHALL, ELEMENT.REPRESENTATIVE, relation=RELATION.EXCLUDE_F
 
 
 # Drawing the graph
+FILE_NAME = "RelationGraph"
+GRAPH_IMAGE_SIZE = (40,40)
+fig = plt.figure(figsize=GRAPH_IMAGE_SIZE)
 edge_labels = nx.get_edge_attributes(G,'relation')
 pos = nx.planar_layout(G)
 nx.draw_networkx_edge_labels(G, pos, edge_labels)
 nx.draw(G, pos, with_labels = True)
+plt.savefig(FILE_NAME + ".svg", format="SVG")
+plt.savefig(FILE_NAME + ".png", format="PNG")
 plt.show()
