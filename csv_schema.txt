@@ -1,0 +1,33 @@
+CSV Schema:
+
+article, actor, aim, aim_category, deontic, condition, method
+
+Examples are made up. 
+
+article, actor, aim, aim_category, deontic, active condition, method
+1, "marszalek", "wskazac", "wybiera", "musi", "w okresie 30 dni o poczatku kadencji Sejmu", ""
+
+
+Aim matrix
+		marszalek	prezydium	posel
+marszalek	-		wskazuje	powoluje
+prezydium	-		-		odwoluje
+posel		zastepuje	-		-
+
+Deontic matrix
+		marszalek	prezydium	posel
+marszalek	-		musi		powinien
+prezydium	-		moze		-
+posel		moze		-		moze
+
+Condition matrix
+		marszalek		prezydium		posel
+marszalek	-			w okresie 30 dni	w czasie obecnej kadencji
+prezydium	-			-			-
+posel		w drodze wyjatku	-			do dwóch dni po wydarzeniu
+
+Method matrix
+		marszalek			prezydium		posel
+marszalek	-				w okresie 30 dni	-
+prezydium	-				-			w zgodzie z artykulem 7
+posel		kosultujac sie z komisja	-			-
