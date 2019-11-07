@@ -1,32 +1,38 @@
-CSV Schema:
+CSV Schema
 
+Header (column names):
 article, actor, aim, aim_category, deontic, condition, method
 
 Examples are made up. 
 
+Row example:
 article, actor, aim, aim_category, deontic, active condition, method
 1, "marszalek", "wskazac", "wybiera", "musi", "w okresie 30 dni o poczatku kadencji Sejmu", ""
 
-
+Matrix examples:
 Aim matrix
+
 		marszalek	prezydium	posel
 marszalek	-		wskazuje	powoluje
 prezydium	-		-		odwoluje
 posel		zastepuje	-		-
 
 Deontic matrix
+
 		marszalek	prezydium	posel
 marszalek	-		musi		powinien
 prezydium	-		moze		-
 posel		moze		-		moze
 
 Condition matrix
+
 		marszalek		prezydium		posel
 marszalek	-			w okresie 30 dni	w czasie obecnej kadencji
 prezydium	-			-			-
-posel		w drodze wyjatku	-			do dwóch dni po wydarzeniu
+posel		w drodze wyjatku	-			do dwÃ³ch dni po wydarzeniu
 
 Method matrix
+
 		marszalek			prezydium		posel
 marszalek	-				w okresie 30 dni	-
 prezydium	-				-			w zgodzie z artykulem 7
